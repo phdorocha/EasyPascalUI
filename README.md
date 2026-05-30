@@ -1,19 +1,128 @@
 # EasyPascalUI
 
-Framework visual em Pascal/Lazarus para aplicações desktop LCL da SiD Solucoes.
+English | [Português](#portugues)
 
-O objetivo e oferecer uma base reaproveitavel, parecida com a ideia do Bootstrap,
-mas voltada para sistemas desktop Pascal: paleta, tipografia, espacamentos,
-helpers de componentes e telas prontas para manter os projetos com o mesmo padrao
-visual.
+## English
 
-## Recursos atuais
+EasyPascalUI is a reusable Pascal/Lazarus visual framework for LCL desktop
+applications.
+
+Its goal is similar to Bootstrap, but for Pascal desktop systems: a shared
+visual foundation with palette, typography, spacing, component helpers, and
+ready-to-use screens that keep projects visually consistent.
+
+## Current Features
+
+- SiD/EasyGestor visual theme.
+- Helpers for panels, labels, buttons, edits, password edits, and progress bars.
+- Modern configurable splash screen.
+- 100% Pascal-created UI, with no `.lfm` dependency.
+- Compatible with Lazarus, Free Pascal, and LCL.
+
+## Structure
+
+```text
+EasyPascalUI/
+├── EasyPascalUI.lpk       Reusable Lazarus package
+├── README.md              This documentation
+├── src/                   Framework units
+│   ├── uSidTheme.pas      Colors, fonts, and spacing
+│   ├── uSidUI.pas         LCL component creation helpers
+│   └── uSidSplash.pas     Configurable splash screen
+└── examples/
+    └── SplashDemo/        Minimal usage example
+```
+
+## Installation In Another Project
+
+### Option 1: Add The Unit Path
+
+1. Copy the `EasyPascalUI` folder into your project or into a shared folder.
+2. In Lazarus, open `Project > Project Options > Compiler Options > Paths`.
+3. Add this path:
+
+```text
+EasyPascalUI/src
+```
+
+4. Use the units you need:
+
+```pascal
+uses
+  uSidTheme, uSidUI, uSidSplash;
+```
+
+### Option 2: Install As A Lazarus Package
+
+1. Open `EasyPascalUI/EasyPascalUI.lpk` in Lazarus.
+2. Compile the package.
+3. Add `EasyPascalUI` to the required packages of the consuming project.
+
+## Splash Example
+
+```pascal
+uses
+  Forms, uSidSplash;
+
+var
+  Splash: TSidSplashForm;
+  Info: TSidSplashInfo;
+
+begin
+  Application.Initialize;
+
+  Info := SidSplashInfo(
+    'EasyPDV',
+    'Desktop point of sale',
+    'NFC-e with ACBr  |  Local ZEOS/SQLite database',
+    'SiD Solucoes EasyGestor standard'
+  );
+
+  Splash := TSidSplashForm.CreateWithInfo(nil, Info);
+  try
+    Splash.Show;
+    Splash.UpdateStatus('Loading...', 40);
+    Splash.WaitMinimum(1200);
+  finally
+    Splash.Free;
+  end;
+end.
+```
+
+## Conventions
+
+- Units should be independent from business rules.
+- Components should be created in code to make reuse easier.
+- Product-specific text should stay in the consuming project, not in the
+  framework.
+- New components should accept configuration through parameters or simple
+  records.
+
+## License
+
+Copyright (c) SiD Solucoes.
+
+Internal use and redistribution according to SiD Solucoes authorization.
+
+---
+
+## Portugues
+
+EasyPascalUI e um framework visual em Pascal/Lazarus para aplicacoes desktop LCL.
+
+O objetivo e oferecer uma base reaproveitavel, parecida com a ideia do
+Bootstrap, mas voltada para sistemas desktop Pascal: paleta, tipografia,
+espacamentos, helpers de componentes e telas prontas para manter os projetos
+com o mesmo padrao visual.
+
+## Recursos Atuais
 
 - Tema visual padrao SiD/EasyGestor.
-- Helpers para criar paineis, labels, botoes e barras de progresso.
+- Helpers para criar paineis, labels, botoes, campos de texto, campos de senha
+  e barras de progresso.
 - Tela splash moderna e configuravel.
 - Codigo 100% criado por Pascal, sem dependencia de `.lfm`.
-- Compatibilidade com Lazarus/Free Pascal e LCL.
+- Compatibilidade com Lazarus, Free Pascal e LCL.
 
 ## Estrutura
 
@@ -29,9 +138,9 @@ EasyPascalUI/
     └── SplashDemo/        Exemplo minimo de uso
 ```
 
-## Instalacao em outro projeto
+## Instalacao Em Outro Projeto
 
-### Opcao 1: adicionar o caminho das units
+### Opcao 1: Adicionar O Caminho Das Units
 
 1. Copie a pasta `EasyPascalUI` para dentro do seu projeto ou para uma pasta
    compartilhada.
@@ -49,13 +158,13 @@ uses
   uSidTheme, uSidUI, uSidSplash;
 ```
 
-### Opcao 2: instalar como pacote Lazarus
+### Opcao 2: Instalar Como Pacote Lazarus
 
 1. Abra `EasyPascalUI/EasyPascalUI.lpk` no Lazarus.
 2. Compile o pacote.
 3. Adicione `EasyPascalUI` aos pacotes requeridos do projeto consumidor.
 
-## Exemplo de splash
+## Exemplo De Splash
 
 ```pascal
 uses
