@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="/"/>
+    <Name Value="EasyPascalUI"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="SiD Solucoes"/>
+    <Description Value="Framework visual LCL reutilizavel para sistemas Pascal desktop."/>
+    <License Value="Proprietario - SiD Solucoes"/>
+    <Version Major="0" Minor="2" Release="0" Build="0"/>
+    <Files Count="3">
+      <Item1>
+        <Filename Value="src/uSidTheme.pas"/>
+        <UnitName Value="uSidTheme"/>
+      </Item1>
+      <Item2>
+        <Filename Value="src/uSidUI.pas"/>
+        <UnitName Value="uSidUI"/>
+      </Item2>
+      <Item3>
+        <Filename Value="src/uSidSplash.pas"/>
+        <UnitName Value="uSidSplash"/>
+      </Item3>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="src"/>
+    </UsageOptions>
+  </Package>
+</CONFIG>
