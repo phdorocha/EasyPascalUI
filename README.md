@@ -100,9 +100,10 @@ end.
 
 ## License
 
-Copyright (c) SiD Solucoes.
+Copyright (c) Paulo Henrique dos Santos Andrade.
 
-Internal use and redistribution according to SiD Solucoes authorization.
+Internal use and redistribution according to Paulo Henrique dos Santos Andrade
+authorization.
 
 ---
 
@@ -205,6 +206,7 @@ end.
 
 ## Licenca
 
-Copyright (c) SiD Solucoes.
+Copyright (c) Paulo Henrique dos Santos Andrade.
 
-Uso interno e redistribuicao conforme autorizacao da SiD Solucoes.
+Uso interno e redistribuicao conforme autorizacao de Paulo Henrique dos Santos
+Andrade.

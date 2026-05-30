@@ -4,9 +4,9 @@
     <PathDelim Value="/"/>
     <Name Value="EasyPascalUI"/>
     <Type Value="RunAndDesignTime"/>
-    <Author Value="SiD Solucoes"/>
+    <Author Value="Paulo Henrique dos Santos Andrade"/>
     <Description Value="Framework visual LCL reutilizavel para sistemas Pascal desktop."/>
-    <License Value="Proprietario - SiD Solucoes"/>
+    <License Value="Proprietario - Paulo Henrique dos Santos Andrade"/>
     <Version Major="0" Minor="2" Release="0" Build="0"/>
     <Files Count="3">
       <Item1>
